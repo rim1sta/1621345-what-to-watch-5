@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/app/app";
 
-const Settings = {
+const MovieInfo = {
   filmTitle: `The Grand Budapest Hotel`,
   filmGenre: `Drama`,
   filmYear: `2014`
@@ -10,9 +10,9 @@ const Settings = {
 
 ReactDOM.render(
     <App
-      filmTitle={Settings.filmTitle}
-      filmGenre={Settings.filmGenre}
-      filmYear={Settings.filmYear}
+      filmTitle={MovieInfo.filmTitle}
+      filmGenre={MovieInfo.filmGenre}
+      filmYear={MovieInfo.filmYear}
     />,
     document.querySelector(`#root`)
 );
