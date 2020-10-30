@@ -7,6 +7,9 @@ import MyList from "../my-list/my-list";
 import Film from "../film/film";
 import AddRewiew from "../add-rewiew/add-rewiew";
 import Player from "../player/player";
+import FilmCard from "../film-card";
+
+
 
 const App = (props) => {
   const {filmTitle, filmGenre, filmYear} = props;
@@ -34,6 +37,12 @@ const App = (props) => {
         <Route exact path="/player/:id">
           <Player/>
         </Route>
+        <Route exact path="/fils/:id/filmcard">
+          <FilmCard
+          film={film}
+          onCardHover={onCardHover}
+          onCardBlur={onCardBlur}/>
+        </Route>
       </Switch>
     </BrowserRouter>
   );
@@ -43,6 +52,7 @@ App.propTypes = {
   filmTitle: PropTypes.string.isRequired,
   filmGenre: PropTypes.string.isRequired,
   filmYear: PropTypes.string.isRequired,
+
 };
 
 export default App;

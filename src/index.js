@@ -2,10 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/app/app";
 import films from "./mocks/films";
-import PropTypes for (let index = 0; index < array.length; index++) {
-  const element = array[index];
-
-}
+import PropTypes from "prop-types";
 
 
 const movieInfo = {
