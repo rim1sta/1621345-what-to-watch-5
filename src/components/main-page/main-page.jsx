@@ -1,6 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+
+
+
 const MainPage = (props) => {
   const {filmTitle, filmGenre, filmYear} = props;
 
