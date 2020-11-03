@@ -2,11 +2,6 @@ import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 import { FilmCard } from "../film-card/film-card";
 
-
-class FilmsList extends PureComponent {
-  constructor(props){
-    super(props);
-    this.state = {
 export default class FilmList extends PureComponent {
   constructor(props) {
     super(props);
@@ -43,7 +38,8 @@ export default class FilmList extends PureComponent {
   };
 };
 
-
-    }
-  }
+FilmList.PropTypes = {
+  films: filmShape.isRequired,
+  onCardHover: PropTypes.func.isRequired,
+  onCardBlur: PropTypes.func.isRequired,
 }

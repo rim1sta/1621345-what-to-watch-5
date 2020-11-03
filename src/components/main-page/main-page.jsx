@@ -1,9 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import FilmList from "../films-list/films-list";
-import { filmShape } from "../props-validataion";
-
-
+import {filmShape} from "../props-validataion";
 
 
 const MainPage = (props) => {
@@ -101,7 +99,7 @@ const MainPage = (props) => {
               <a href="#" className="catalog__genres-link">Thrillers</a>
             </li>
           </ul>
-          
+
           <FilmList films={films} />
 
           <div className="catalog__more">

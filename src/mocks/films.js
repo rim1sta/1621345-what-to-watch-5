@@ -15,7 +15,7 @@ export const films = [
       `Saoirse Ronan`,
     ],
     description: `In the 1930s, the Grand Budapest `,
-    poster: `img/the-grand-budapest-hotel-poster.jpg`,
+    poster: `img/posters/fantastic.jpg`,
     video: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     previewVideo: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
   },
@@ -55,7 +55,7 @@ export const films = [
       `Saoirse Ronan`,
     ],
     description: `In the 1930s, the Grand Budapest `,
-    poster: `img/the-grand-budapest-hotel-poster.jpg`,
+    poster: `img/posters/bogemian.jpg`,
     video: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     previewVideo: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
   },
@@ -75,7 +75,7 @@ export const films = [
       `Saoirse Ronan`,
     ],
     description: `In the 1930s, the Grand Budapest `,
-    poster: `img/the-grand-budapest-hotel-poster.jpg`,
+    poster: `img/posters/macbeth.jpg`,
     video: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     previewVideo: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
   },
@@ -95,7 +95,7 @@ export const films = [
       `Saoirse Ronan`,
     ],
     description: `In the 1930s, the Grand Budapest `,
-    poster: `img/the-grand-budapest-hotel-poster.jpg`,
+    poster: `img/posters/aviator.jpeg`,
     video: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     previewVideo: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
   },
@@ -115,7 +115,7 @@ export const films = [
       `Saoirse Ronan`,
     ],
     description: `In the 1930s, the Grand Budapest `,
-    poster: `img/the-grand-budapest-hotel-poster.jpg`,
+    poster: `img/posters/wwds.jpg`,
     video: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     previewVideo: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
   },
@@ -135,7 +135,7 @@ export const films = [
       `Saoirse Ronan`,
     ],
     description: `In the 1930s, the Grand Budapest `,
-    poster: `img/the-grand-budapest-hotel-poster.jpg`,
+    poster: `img/posters/revenant.jpg`,
     video: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     previewVideo: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
   },
@@ -155,8 +155,8 @@ export const films = [
       `Saoirse Ronan`,
     ],
     description: `In the 1930s, the Grand Budapest `,
-    poster: `img/the-grand-budapest-hotel-poster.jpg`,
+    poster: `img/posters/johnny.jpg`,
     video: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     previewVideo: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
   },
-]
+];

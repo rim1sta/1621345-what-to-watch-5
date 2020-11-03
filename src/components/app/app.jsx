@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 import MainPage from "../main-page/main-page";
 import {BrowserRouter, Switch, Route, Link, Redirect} from "react-router-dom";
@@ -7,9 +7,9 @@ import MyList from "../my-list/my-list";
 import Film from "../film/film";
 import AddRewiew from "../add-rewiew/add-rewiew";
 import Player from "../player/player";
-import { filmShape } from "../props-validataion";
+import {filmShape} from "../props-validataion";
 
-const App = (props) => { 
+const App = (props) => {
   const {filmTitle, filmGenre, filmYear, films} = props;
   return (
     <BrowserRouter>
@@ -18,8 +18,8 @@ const App = (props) => {
           <MainPage
             filmTitle={filmTitle}
             filmGenre={filmGenre}
-            filmYear={filmYear} 
-            films={films}          
+            filmYear={filmYear}
+            films={films}
           />
         </Route>
         <Route exact path="/login">
@@ -31,13 +31,15 @@ const App = (props) => {
         <Route exact path="/films/:id"
           render={(routerProps) => {
             const filmId = routerProps.match.params.id;
-            const film = films.find(film => film.id === filmId);
-        
-            if(!film) return (<Redirect to='/404' />);
+            const film = films.find((film) => film.id === filmId);
+
+            if (!film) {
+              return (<Redirect to='/404' />);
+            }
             return (
               <Film film={film} />
-            )
-          }}      
+            );
+          }}
         />
         <Route exact path="/films/:id/review">
           <AddRewiew/>

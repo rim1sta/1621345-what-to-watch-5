@@ -1,7 +1,7 @@
 import React from "react";
 
 const Film = (props) => {
-  const { film } = props;
+  const {film} = props;
   return (
     <React.Fragment>
       <section className="movie-card movie-card--full">
