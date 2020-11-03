@@ -1,9 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/app/app";
-import films from "./mocks/films";
-import PropTypes from "prop-types";
-
+import { films } from "./mocks/films";
 
 const movieInfo = {
   filmTitle: `The Grand Budapest Hotel`,
