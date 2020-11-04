@@ -1,10 +1,13 @@
 import React from "react";
+import {filmShape} from "../props-validataion";
 
-const Player = () => {
+
+const Player = (props) => {
+  const {film} = props;
   return (
     <React.Fragment>
       <div className="player">
-        <video src="#" className="player__video" poster="img/player-poster.jpg"></video>
+        <video src={film.video} className="player__video" poster="img/player-poster.jpg"></video>
 
         <button type="button" className="player__exit">Exit</button>
 
@@ -37,6 +40,10 @@ const Player = () => {
       </div>
     </React.Fragment>
   );
+};
+
+Player.propTypes = {
+  film: filmShape.isRequired,
 };
 
 export default Player;

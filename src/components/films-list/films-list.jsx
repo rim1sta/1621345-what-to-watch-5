@@ -1,6 +1,7 @@
 import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
-import { FilmCard } from "../film-card/film-card";
+import {FilmCard} from "../film-card/film-card";
+import {filmShape} from "../props-validataion";
 
 export default class FilmList extends PureComponent {
   constructor(props) {
@@ -12,21 +13,19 @@ export default class FilmList extends PureComponent {
     this.onCardBlur = this.onCardBlur.bind(this);
   }
 
-  onCardHover (filmId) {
-    console.log('hover', filmId);
+  onCardHover(filmId) {
     this.setState({
       activeFilmId: filmId,
-    })
+    });
   }
 
-  onCardBlur () {
-    console.log('blur');
+  onCardBlur() {
     this.setState({
       activeFilmId: null,
-    })
+    });
   }
 
-  render () {
+  render() {
     const {films} = this.props;
     return (
       <div className="catalog__movies-list">
@@ -34,12 +33,12 @@ export default class FilmList extends PureComponent {
           <FilmCard key={key} film={film} onCardHover={this.onCardHover} onCardBlur={this.onCardBlur} />
         ))}
       </div>
-      )
-  };
-};
+    );
+  }
+}
 
-FilmList.PropTypes = {
-  films: filmShape.isRequired,
+FilmList.propTypes = {
+  films: PropTypes.arrayOf(filmShape).isRequired,
   onCardHover: PropTypes.func.isRequired,
   onCardBlur: PropTypes.func.isRequired,
-}
+};

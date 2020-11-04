@@ -1,4 +1,4 @@
-import React, {PureComponent} from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import MainPage from "../main-page/main-page";
 import {BrowserRouter, Switch, Route, Link, Redirect} from "react-router-dom";
@@ -7,46 +7,83 @@ import MyList from "../my-list/my-list";
 import Film from "../film/film";
 import AddRewiew from "../add-rewiew/add-rewiew";
 import Player from "../player/player";
-import {filmShape} from "../props-validataion";
+import {filmShape, movieShape} from "../props-validataion";
+import AddComment from "../add-comment/add-comment";
+
 
 const App = (props) => {
-  const {filmTitle, filmGenre, filmYear, films} = props;
+  const {films, movieInfo} = props;
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/"
+
+        >
           <MainPage
-            filmTitle={filmTitle}
-            filmGenre={filmGenre}
-            filmYear={filmYear}
+            movieInfo={movieInfo}
             films={films}
+
           />
         </Route>
         <Route exact path="/login">
           <Login/>
         </Route>
         <Route exact path="/mylist">
-          <MyList />
+          <MyList films={films}/>
         </Route>
         <Route exact path="/films/:id"
           render={(routerProps) => {
             const filmId = routerProps.match.params.id;
-            const film = films.find((film) => film.id === filmId);
+            const movie = films.find((film) => film.id === filmId);
 
-            if (!film) {
+            if (!movie) {
               return (<Redirect to='/404' />);
             }
             return (
-              <Film film={film} />
+              <Film film={movie}
+                films={films} />
             );
           }}
         />
-        <Route exact path="/films/:id/review">
-          <AddRewiew/>
-        </Route>
-        <Route exact path="/player/:id">
-          <Player/>
-        </Route>
+        <Route exact path="/films/:id/review"
+          render={(routerProps) => {
+            const filmId = routerProps.match.params.id;
+            const movie = films.find((film) => film.id === filmId);
+
+            if (!movie) {
+              return (<Redirect to='/404' />);
+            }
+            return (
+              <AddRewiew films={films}
+                film={movie}/>
+            );
+          }}/>
+        <Route exact path="/player/:id"
+          render={(routerProps) => {
+            const filmId = routerProps.match.params.id;
+            const movie = films.find((film) => film.id === filmId);
+
+            if (!movie) {
+              return (<Redirect to='/404' />);
+            }
+            return (
+              <Player film={movie} />
+            );
+          }}/>
+        <Route exact path="/films/:id/addreview"
+          render={(routerProps) => {
+            const filmId = routerProps.match.params.id;
+            const movie = films.find((film) => film.id === filmId);
+
+            if (!movie) {
+              return (<Redirect to='/404' />);
+            }
+            return (
+              <AddComment film={movie} />
+            );
+          }}/>
+
+
         <Route exact path="/404">
           <>
             <h1>404.</h1>
@@ -57,16 +94,16 @@ const App = (props) => {
         <Route>
           <Redirect to='/404' />
         </Route>
+
       </Switch>
     </BrowserRouter>
   );
 };
 
 App.propTypes = {
-  filmTitle: PropTypes.string.isRequired,
-  filmGenre: PropTypes.string.isRequired,
-  filmYear: PropTypes.string.isRequired,
+  movieInfo: PropTypes.shape(movieShape).isRequired,
   film: filmShape,
+  films: PropTypes.arrayOf(filmShape).isRequired,
 };
 
 export default App;

@@ -15,8 +15,8 @@ export const FilmCard = (props) => {
         <img src={film.poster} alt="Bohemian Rhapsody" width="280" height="175" />
       </div>
       <h3 className="small-movie-card__title">
-        {/* <Link className="small-movie-card__link" to={`/films/${film.id}`}>{film.title}</Link> */}
-        <a className="small-movie-card__link" href={`/films/${film.id}`}>{film.title}</a>
+        <Link className="small-movie-card__link" to={`/films/${film.id}`}>{film.title}</Link>
+
       </h3>
     </article>
   );

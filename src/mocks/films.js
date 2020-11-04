@@ -1,3 +1,4 @@
+
 export const films = [
   {
     id: `1`,
@@ -68,11 +69,11 @@ export const films = [
     duration: 124,
     starring:
     [
-      `Bill Murray`,
-      `Edward Norton`,
-      `Jude Law`,
-      `Willem Dafoe`,
-      `Saoirse Ronan`,
+      `Leonardo Di Kaprio, `,
+      `Edward Norton, `,
+      `Jude Law, `,
+      `Willem Dafoe, `,
+      `Saoirse Ronan, `,
     ],
     description: `In the 1930s, the Grand Budapest `,
     poster: `img/posters/macbeth.jpg`,
@@ -160,3 +161,9 @@ export const films = [
     previewVideo: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
   },
 ];
+export const movieInfo =
+  {
+    filmTitle: `The Grand Budapest Hotel`,
+    filmGenre: `Drama`,
+    filmYear: `2014`,
+  };
