@@ -102,7 +102,6 @@ const App = (props) => {
 
 App.propTypes = {
   movieInfo: PropTypes.shape(movieShape).isRequired,
-  film: filmShape,
   films: PropTypes.arrayOf(filmShape).isRequired,
 };
 

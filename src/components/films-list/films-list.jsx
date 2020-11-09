@@ -39,6 +39,4 @@ export default class FilmList extends PureComponent {
 
 FilmList.propTypes = {
   films: PropTypes.arrayOf(filmShape).isRequired,
-  onCardHover: PropTypes.func.isRequired,
-  onCardBlur: PropTypes.func.isRequired,
 };
