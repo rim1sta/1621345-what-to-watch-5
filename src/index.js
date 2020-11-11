@@ -14,6 +14,6 @@ ReactDOM.render(
     document.querySelector(`#root`)
 );
 App.propTypes = {
-  movieInfo: PropTypes.shape(movieShape).isRequired,
+  movieInfo: movieShape.isRequired,
   films: PropTypes.arrayOf(filmShape).isRequired,
 };

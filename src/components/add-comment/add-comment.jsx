@@ -1,9 +1,9 @@
 import React, {PureComponent} from "react";
 import {filmShape} from "../props-validataion";
 import {Link} from "react-router-dom";
-import PropTypes from "prop-types";
 
-class AddComment extends PureComponent {
+
+export default class AddComment extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -101,4 +101,4 @@ AddComment.propTypes = {
   film: filmShape.isRequired,
 };
 
-export default AddComment;
+
