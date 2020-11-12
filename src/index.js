@@ -1,18 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/app/app";
-
-const movieInfo = {
-  filmTitle: `The Grand Budapest Hotel`,
-  filmGenre: `Drama`,
-  filmYear: `2014`
-};
+import {films, movieInfo} from "./mocks/films";
+import PropTypes from "prop-types";
+import {filmShape, movieShape} from "../props-validataion";
 
 ReactDOM.render(
     <App
-      filmTitle={movieInfo.filmTitle}
-      filmGenre={movieInfo.filmGenre}
-      filmYear={movieInfo.filmYear}
+      films={films}
+      movieInfo={movieInfo}
+
     />,
     document.querySelector(`#root`)
 );
+App.propTypes = {
+  movieInfo: movieShape.isRequired,
+  films: PropTypes.arrayOf(filmShape).isRequired,
+};
