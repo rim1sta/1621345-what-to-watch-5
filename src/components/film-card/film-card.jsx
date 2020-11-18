@@ -27,9 +27,7 @@ export const FilmCard = (props) => {
     </article>
   );
 };
-
 FilmCard.propTypes = {
-  isActive: PropTypes.bool.isRequired,
   film: filmShape.isRequired,
   onCardHover: PropTypes.func.isRequired,
   onCardBlur: PropTypes.func.isRequired,
