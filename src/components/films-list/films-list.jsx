@@ -16,14 +16,12 @@ export default class FilmList extends PureComponent {
   onCardHover(filmId) {
     this.setState({
       activeFilmId: filmId,
-      isCardActive: true,
     });
   }
 
   onCardBlur() {
     this.setState({
       activeFilmId: null,
-      isCardActive: false,
     });
   }
 
@@ -32,7 +30,13 @@ export default class FilmList extends PureComponent {
     return (
       <div className="catalog__movies-list">
         {films.map((film, key) => (
-          <FilmCard key={key} film={film} onCardHover={this.onCardHover} onCardBlur={this.onCardBlur} />
+          <FilmCard
+            key={key}
+            film={film}
+            onCardHover={this.onCardHover}
+            onCardBlur={this.onCardBlur}
+            isActive={this.state.activeFilmId === film.id}
+          />
         ))}
       </div>
     );
