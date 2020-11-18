@@ -1,5 +1,6 @@
 import React from "react";
 import {filmShape} from "../props-validataion";
+import { Link } from "react-router-dom";
 
 
 const Player = (props) => {

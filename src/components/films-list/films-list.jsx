@@ -16,12 +16,14 @@ export default class FilmList extends PureComponent {
   onCardHover(filmId) {
     this.setState({
       activeFilmId: filmId,
+      isCardActive: true,
     });
   }
 
   onCardBlur() {
     this.setState({
       activeFilmId: null,
+      isCardActive: false,
     });
   }
 

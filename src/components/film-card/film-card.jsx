@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import {filmShape} from "../props-validataion";
 import {Link} from "react-router-dom";
 
+
 export const FilmCard = (props) => {
   const {film, onCardHover, onCardBlur} = props;
   return (
@@ -18,6 +19,7 @@ export const FilmCard = (props) => {
         <Link className="small-movie-card__link" to={`/films/${film.id}`}>{film.title}</Link>
 
       </h3>
+
     </article>
   );
 };

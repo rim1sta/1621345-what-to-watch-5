@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./components/app/app";
 import {films, movieInfo} from "./mocks/films";
 import PropTypes from "prop-types";
-import {filmShape, movieShape} from "../props-validataion";
+import {filmShape, movieShape} from "./components/props-validataion";
 
 ReactDOM.render(
     <App
