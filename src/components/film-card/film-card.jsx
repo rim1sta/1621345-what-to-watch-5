@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import {filmShape} from "../props-validataion";
 import {Link} from "react-router-dom";
-import {VideoPlayerFunc} from "../video-player/video-player-functional";
+import {VideoPlayerFunc} from "../video-player-functional/video-player-functional";
 
 
 export const FilmCard = (props) => {
