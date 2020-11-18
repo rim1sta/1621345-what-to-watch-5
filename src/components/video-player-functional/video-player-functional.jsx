@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {useRef, useEffect, useState} from "react";
+import React, {useRef, useEffect} from "react";
 
 export const VideoPlayerFunc = (props) => {
   const {poster, src} = props;
