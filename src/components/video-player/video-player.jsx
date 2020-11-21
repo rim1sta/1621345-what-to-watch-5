@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {useRef, useEffect} from "react";
 
-export const VideoPlayerFunc = (props) => {
+export const VideoPlayer = (props) => {
   const {poster, src} = props;
   const videoRef = useRef(null);
 
@@ -32,9 +32,9 @@ export const VideoPlayerFunc = (props) => {
     </React.Fragment>);
 };
 
-VideoPlayerFunc.propTypes = {
+VideoPlayer.propTypes = {
   src: PropTypes.string.isRequired,
   poster: PropTypes.string.isRequired,
 };
 
-export default VideoPlayerFunc;
+export default VideoPlayer;

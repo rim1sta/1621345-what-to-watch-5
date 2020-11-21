@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import {filmShape} from "../props-validataion";
 import {Link} from "react-router-dom";
-import {VideoPlayerFunc} from "../video-player-functional/video-player-functional";
+import {VideoPlayer} from "../video-player-functional/video-player-functional";
 
 
 export const FilmCard = (props) => {
@@ -16,7 +16,7 @@ export const FilmCard = (props) => {
     >
       <div className="small-movie-card__image">
         {isActive
-          ? <VideoPlayerFunc poster={film.poster} src={film.previewVideo} />
+          ? <VideoPlayer poster={film.poster} src={film.previewVideo} />
           : <img src={film.poster} alt="Bohemian Rhapsody" width="280" height="175" />
         }
 
@@ -31,4 +31,5 @@ FilmCard.propTypes = {
   film: filmShape.isRequired,
   onCardHover: PropTypes.func.isRequired,
   onCardBlur: PropTypes.func.isRequired,
+  isActive: PropTypes.func.isRequired,
 };
